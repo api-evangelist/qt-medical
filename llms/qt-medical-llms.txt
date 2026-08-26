@@ -1,0 +1,94 @@
+# QT Medical, Inc.
+
+> QT Medical builds the PCA 500, an FDA-cleared hospital-quality wireless 12-lead ECG
+> recorder for professional and personal use, together with the patented QHeart
+> prepositioned electrode sensor, the QT ECG mobile and Windows applications, and the QTM
+> Dashboard — a HIPAA- and GDPR-compliant cloud where recorded ECGs are stored, reviewed,
+> compared and shared. Headquarters: Diamond Bar, California, USA.
+
+## What an agent can and cannot do here
+
+QT Medical has **no public developer program**. As of 2026-08-26 there is no developer
+portal, no API reference, no OpenAPI/AsyncAPI/GraphQL contract, no SDK in any public package
+registry, no MCP server and no A2A agent card. `/llms.txt`, `/openapi.json` and every
+`/.well-known/*` path return HTTP 404 on both `www.qtmedical.com` and
+`dashboard.qtmedical.com`.
+
+An API does exist and QT Medical says so on its own product page — "API available for EMR
+integration*** (Extra fee)" — and the company also offers telehealth partners an **ADK** for
+embedding ECG capture into their own mobile apps. Neither is self-serve: both are obtained
+through the sales team, under contract, with no published documentation. The documented
+default path for getting an ECG into an EMR is manual: "Completed ECG report available in
+PDF for EMR."
+
+**There is nothing here for an agent to call.** Do not construct requests against
+`dashboard.qtmedical.com`; it is a Laravel web application serving a human sign-in page, not
+a documented API. Route integration questions to sales.
+
+## Products
+
+- [PCA 500 12-lead ECG](https://www.qtmedical.com/en/products/PCA-500): compact wireless
+  12-lead ECG recorder; 510(k) cleared 2018 (adult, non-acute incl. home), 2022 (infants,
+  children, adolescents), February 2024 (acute care). Also CE, PMDA (Japan), TGA
+  (Australia), Health Canada MDL.
+- [QHeart Sensor](https://www.qtmedical.com/en/product-categories/Qheart-Sensor): patented
+  single-use prepositioned electrode strip; QT Medical states it cuts lead-placement time by
+  up to 70%.
+- [Xpress ECG](https://www.qtmedical.com/en/products/XpressECG)
+- QT ECG apps: iOS, Android and Windows desktop; connect to the recorder over Bluetooth and
+  transmit to the cloud.
+- [QTM Dashboard](https://dashboard.qtmedical.com/login): the cloud console (sign-in
+  required).
+
+## Applications
+
+- [Remote care & home monitoring](https://www.qtmedical.com/en/applications/remote-care-and-home-monitoring)
+- [Clinics and medical offices](https://www.qtmedical.com/en/applications/clinics-and-medical-offices-ecg)
+- [EMS and emergency departments](https://www.qtmedical.com/en/applications/ems-and-emergency-departments)
+- [Urgent care centers](https://www.qtmedical.com/en/applications/urgent-care-centers)
+- [Pediatrics](https://www.qtmedical.com/en/applications/pediatrics)
+- [Athlete screening](https://www.qtmedical.com/en/applications/athletes-screening)
+- [Telehealth and others](https://www.qtmedical.com/en/applications/others) — the page that
+  states: "QT Medical also provides telehealth providers with ADK solutions for integration
+  with existing mobile app solutions."
+
+## Documentation
+
+All product documentation is PDF, published on one page — there is no HTML manual and no API
+documentation of any kind.
+
+- [Downloads](https://www.qtmedical.com/en/downloads): User Manual (US FDA), User Manual
+  (CE), Spanish system manual, App user manuals, troubleshooting guide, quick guide,
+  electrode sizing guides, tri-fold brochure, and a "Cloud-Based ECG" white paper.
+- [Compatible devices](https://www.qtmedical.com/en/pages/Compatibility)
+- [Patient FAQs](https://www.qtmedical.com/en/faqs)
+
+## Compliance
+
+- HIPAA (stated Business Associate posture; 164.514(b)(2)(i) safe-harbor de-identification;
+  Security Rule safeguards), HITECH, CCPA and GDPR — all set out in the
+  [Privacy Policy](https://www.qtmedical.com/en/privacy).
+- Device authorisations: FDA 510(k), CE, PMDA, TGA, Health Canada MDL. These are
+  market-authorisation clearances for the device, not information-security certifications.
+- No SOC 2, ISO 27001 or HITRUST attestation is published; no trust center; no
+  vulnerability-disclosure policy or `security.txt`.
+
+## Company
+
+- [About QT Medical](https://www.qtmedical.com/en/abouts/about-QT-Medical)
+- [News](https://www.qtmedical.com/en/new-categories)
+- [Blog](https://www.qtmedical.com/en/page-categories/blog)
+- [Research](https://www.qtmedical.com/en/abouts/research)
+- [Careers](https://www.qtmedical.com/en/abouts/career)
+- [LinkedIn](https://www.linkedin.com/company/qt-medical-inc-)
+
+## Contact
+
+- Sales and integration enquiries: sales@qtmedical.com, +1-909-323-0007
+- [Contact form](https://www.qtmedical.com/en/contact) · [Request a demo](https://www.qtmedical.com/en/pages/demo)
+- [Terms](https://www.qtmedical.com/en/term) · [Privacy](https://www.qtmedical.com/en/privacy)
+
+---
+generated: 2026-08-26
+method: generated
+source: apis.yml + QT Medical public site (no provider-published /llms.txt exists; https://www.qtmedical.com/llms.txt returned HTTP 404)

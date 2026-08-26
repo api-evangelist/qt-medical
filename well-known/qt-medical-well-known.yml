@@ -1,0 +1,62 @@
+generated: '2026-08-26'
+method: probed
+source: live HTTPS probes of every QT Medical host named in apis.yml
+note: >-
+  Every /.well-known/ path probed on both QT Medical hosts returned a real HTTP 404 with
+  the site's own 404 body (the marketing site returns its standard 404 template; the QTM
+  Dashboard returns a page titled "QTM Dashboard Error 404"), so these are true negatives
+  rather than an SPA catch-all answering 200 for everything. No document was fetched and
+  none was saved, so NO WellKnown or SecurityTxt pointer is emitted in apis.yml — this file
+  records a measured absence, not a served surface.
+hit_count: 0
+hosts:
+- host: https://www.qtmedical.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+- host: https://dashboard.qtmedical.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+other_probes:
+- url: https://www.qtmedical.com/llms.txt
+  status: 404
+- url: https://www.qtmedical.com/openapi.json
+  status: 404
+- url: https://www.qtmedical.com/robots.txt
+  status: 200
+  note: 'served; contents are "User-agent: * Disallow:" — nothing disallowed, no sitemap directive'
+- url: https://dashboard.qtmedical.com/openapi.json
+  status: 404
+- url: https://dashboard.qtmedical.com/swagger.json
+  status: 404
+- url: https://dashboard.qtmedical.com/v1/openapi.json
+  status: 404
+- url: https://dashboard.qtmedical.com/api-docs
+  status: 404
+- url: https://dashboard.qtmedical.com/robots.txt
+  status: 200

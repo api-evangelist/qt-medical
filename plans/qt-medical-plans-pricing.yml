@@ -1,0 +1,27 @@
+generated: '2026-08-26'
+method: searched
+source: https://qtmedical.com/en-gb/PCA_500
+plan_count: 0
+note: >-
+  QT Medical publishes no pricing page and no plan tiers for anything — device, cloud or API.
+  The PCA 500 hardware is sold through distributors and resellers rather than a QT Medical
+  storefront, the QTM Dashboard cloud has no published subscription tiers, and the only
+  monetisation signal for the API surface is a single asterisked line on QT Medical's own
+  PCA 500 page: "API available for EMR integration*** (Extra fee)". No amount, currency,
+  billing period, quota or overage is stated anywhere on the public site. Every commercial
+  path routes to sales@qtmedical.com / +1-909-323-0007 or a demo request form. Recorded as
+  plan_count 0 — a measured absence, not an unchecked field.
+pricing_pages_probed:
+- url: https://qtmedical.com/en-gb/PCA_500
+  status: 200
+  finding: '"API available for EMR integration*** (Extra fee)" — fee not quantified'
+- url: https://www.qtmedical.com/en/products/PCA-500
+  status: 200
+  finding: 'product page, no prices'
+- url: https://www.qtmedical.com/en/pages/demo
+  status: 200
+  finding: 'demo request form — the commercial entry point'
+- url: https://www.qtmedical.com/en/contact
+  status: 200
+  finding: 'sales@qtmedical.com, +1-909-323-0007'
+plans: []

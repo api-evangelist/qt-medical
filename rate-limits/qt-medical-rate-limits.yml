@@ -1,0 +1,20 @@
+generated: '2026-08-26'
+method: searched
+source: https://www.qtmedical.com/en
+limit_count: 0
+note: >-
+  No rate limits are published. QT Medical has no developer portal, no API reference and no
+  machine-readable contract, so there is no document in which a limit could be stated, and
+  no unauthenticated API response could be observed to read runtime headers from — the only
+  API-adjacent host, dashboard.qtmedical.com, answers /login with an HTML sign-in page and
+  404s every spec path probed. The EMR-integration API QT Medical advertises is obtained
+  through its sales team; any limits attached to it are presumably in the contract, not on
+  the web. Recorded as a measured zero.
+headers_observed: []
+rate_limits: []
+probes:
+- url: https://dashboard.qtmedical.com/login
+  status: 200
+  note: 'HTML sign-in page; no RateLimit-*, X-RateLimit-* or Retry-After response headers'
+- url: https://dashboard.qtmedical.com/openapi.json
+  status: 404

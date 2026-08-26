@@ -1,17 +1,33 @@
 aid: qt-medical
 name: QT Medical
-description: 'QT Medical is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'QT Medical, Inc. is a Diamond Bar, California medical device company building
+  the PCA 500, an FDA-cleared, hospital-quality wireless 12-lead electrocardiogram (ECG)
+  recorder for professional and personal use, paired with the patented QHeart prepositioned
+  electrode sensor, QT ECG mobile and Windows applications, and a HIPAA- and GDPR-compliant
+  cloud (the QTM Dashboard) where recorded ECGs are stored, reviewed and shared. The PCA
+  500 carries 510(k) clearances for adult, pediatric and acute-care use and additional
+  clearances from CE, Japan PMDA, Australia TGA and Health Canada. QT Medical advertises
+  an API for EMR integration and an ADK for telehealth partners embedding ECG capture in
+  their own mobile applications, but publishes no developer portal, no API reference and
+  no machine-readable contract; both are obtained through its sales team.'
 url: https://raw.githubusercontent.com/api-evangelist/qt-medical/refs/heads/main/apis.yml
+image: https://www.qtmedical.com/frontend/images/logo.png
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Health
+- Healthcare
+- Medical Devices
+- ECG
+- Cardiology
+- Remote Patient Monitoring
+- Telehealth
+- HIPAA
+- Digital Health
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -20,4 +36,54 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.qtmedical.com/en
+- type: Support
+  url: https://www.qtmedical.com/en/contact
+- type: Documentation
+  url: https://www.qtmedical.com/en/downloads
+- type: Blog
+  url: https://www.qtmedical.com/en/page-categories/blog
+- type: Login
+  url: https://dashboard.qtmedical.com/login
+- type: TermsOfService
+  url: https://www.qtmedical.com/en/term
+- type: PrivacyPolicy
+  url: https://www.qtmedical.com/en/privacy
+- type: Compliance
+  url: conformance/qt-medical-conformance.yml
+- type: Conformance
+  url: conformance/qt-medical-conformance.yml
+- type: LLMsTxt
+  url: llms/qt-medical-llms.txt
+- type: Plans
+  url: plans/qt-medical-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/qt-medical-rate-limits.yml
+- type: DomainSecurity
+  url: security/qt-medical-domain-security.yml
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: gated
+  reason: sales-gate
+  detail: >-
+    QT Medical advertises "API available for EMR integration*** (Extra fee)" on its own PCA
+    500 page and an ADK for telehealth partners on its telehealth applications page, but
+    ships no developer portal, no API reference and no machine-readable contract — both are
+    obtained only by contacting sales@qtmedical.com, and the documented default EMR path is
+    a manually uploaded PDF report.
+  evidence:
+  - url: https://qtmedical.com/en-gb/PCA_500
+    status: 200
+  - url: https://www.qtmedical.com/en/applications/others
+    status: 200
+  - url: https://dashboard.qtmedical.com/openapi.json
+    status: 404
+  - url: https://www.qtmedical.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.qtmedical.com/llms.txt
+    status: 404
+  checked: '2026-08-26'
